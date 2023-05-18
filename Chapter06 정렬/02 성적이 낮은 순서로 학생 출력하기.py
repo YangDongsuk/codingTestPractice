@@ -1,5 +1,6 @@
 n=int(input())
 lst=[[] for i in range(101)]
+
 print(lst)
 for i in range(n):
     data=input().split()
