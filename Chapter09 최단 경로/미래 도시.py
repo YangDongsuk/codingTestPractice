@@ -11,12 +11,13 @@ for i in range(m):
     lst[b][a]=1
 x,k=map(int,input().split())
 
+#플로이드 워셜 알고리즘
 def flosial(n):
     for k in range(1,n+1):
         for a in range(1,n+1):
             for b in range(1,n+1):
                 lst[a][b]=min(lst[a][b],lst[a][k]+lst[b][k])
-                lst[b][a]=min(lst[b][a],lst[b][k]+lst[a][k])
+                # lst[b][a]=min(lst[b][a],lst[b][k]+lst[a][k]) 이건 없어도 됨.
 flosial(n)
 
 if (lst[1][k]==INF or lst[k][x]==INF):print(-1)
